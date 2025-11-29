@@ -1,0 +1,89 @@
+/////////////////////////////////////////////////////////////////////////////////////////////////
+// 
+//  Required header files
+// 
+/////////////////////////////////////////////////////////////////////////////////////////////////
+
+#include<stdio.h>
+#include<stdbool.h>
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+// 
+//  Function Name : Display
+//  Description :   It displays characters upto 'Z' for capital input and upto 'a' for small input 
+//  Input :         char
+//  Output :        void
+//  Author :        Nidhi Girish Kadival
+//  Date :          28/11/2025
+// 
+/////////////////////////////////////////////////////////////////////////////////////////////////
+
+void Display(char ch)
+{
+    if ((ch>='A') && (ch<='Z'))
+    {
+        while(ch<='Z')
+        {
+            printf("%c\t",ch);
+            ch++;
+        }
+        printf("\n");
+    }
+    else if ((ch>='a') && (ch<='z'))
+    {
+        while(ch>='a')
+        {
+            printf("%c\t",ch);
+            ch--;
+        }
+        printf("\n");
+    }
+    else
+    {
+        return;
+    }
+}   // End of Display
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+// 
+//  Entry point function for the application
+// 
+/////////////////////////////////////////////////////////////////////////////////////////////////
+
+int main()
+{
+    char cValue = {'\0'};
+
+    printf("Enter character:\n");
+    scanf("%c",&cValue);
+
+    Display(cValue);
+
+    return 0;
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+// 
+//  Testcases successfully handled by the application
+//
+//  Input:
+//  Enter character:
+//  Q
+//  Output: Q	R	S	T	U	V	W	X	Y	Z
+//
+//  Input:
+//  Enter character:
+//  f
+//  Output: f	e	d	c	b	a	
+//
+//  Input:
+//  Enter character:
+//  $
+//  Output: 
+//
+//  Input:
+//  Enter character:
+//  6
+//  Output: 
+//
+/////////////////////////////////////////////////////////////////////////////////////////////////
